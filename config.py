@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()  # loads .env file
 
 # Alpaca API credentials
-APACA_API_KEY = os.getenv("APACA_API_KEY")
-APACA_API_SECRET = os.getenv("APACA_API_SECRET")
+ALPACA_API_KEY = os.getenv("ALPACA_API_KEY")
+ALPACA_API_SECRET = os.getenv("ALPACA_API_SECRET")
 
 # Trading symbols
 SYMBOLS = ["ES", "NQ"]  # E-mini S&P 500 and E-mini NASDAQ 100 futures on Alpaca
