@@ -12,6 +12,11 @@ class DataHandler:
             'enableRateLimit': True,
             'options': {
                 'defaultType': 'future',  # Alpaca futures
+            },
+            'urls': {
+                'api': {
+                    'rest': 'https://paper-api.alpaca.markets',
+                }
             }
         })
         # Ensure we are using the paper trading endpoint if needed
