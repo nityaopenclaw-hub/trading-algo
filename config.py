@@ -1,11 +1,17 @@
 import os
 from dotenv import load_dotenv
+from pathlib import Path
 
-load_dotenv()  # loads .env file
+# Load environment variables from .env file
+env_path = Path(__file__).parent / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # Alpaca API credentials
 ALPACA_API_KEY = os.getenv("ALPACA_API_KEY")
 ALPACA_API_SECRET = os.getenv("ALPACA_API_SECRET")
+
+if not ALPACA_API_KEY or not ALPACA_API_SECRET:
+    raise ValueError("Alpaca API credentials not found. Please set ALPACA_API_KEY and ALPACA_API_SECRET in .env file.")
 
 # Trading symbols
 SYMBOLS = ["ES", "NQ"]  # E-mini S&P 500 and E-mini NASDAQ 100 futures on Alpaca
