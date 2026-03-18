@@ -2,13 +2,13 @@ import ccxt
 import pandas as pd
 import pytz
 from datetime import datetime, timedelta
-from config import SYMBOLS, TIMEFRAMES
+from config import SYMBOLS, TIMEFRAMES, ALPACA_API_KEY, ALPACA_API_SECRET
 
 class DataHandler:
     def __init__(self):
         self.exchange = ccxt.alpaca({
-            'apiKey': config.APACA_API_KEY,
-            'secret': config.APACA_API_SECRET,
+            'apiKey': ALPACA_API_KEY,
+            'secret': ALPACA_API_SECRET,
             'enableRateLimit': True,
             'options': {
                 'defaultType': 'future',  # Alpaca futures

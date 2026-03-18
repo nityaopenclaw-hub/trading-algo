@@ -43,7 +43,7 @@ A rule-based trading bot implementing the Inner Circle Trader (ICT) and Smart Mo
 
 6. **(Optional) Test the connection**:
    ```bash
-   python -c "import config; print('Key loaded:', bool(config.APACA_API_KEY))"
+   python -c "import config; print('Key loaded:', bool(config.ALPACA_API_KEY))"
    ```
 
 7. **Run the bot**:

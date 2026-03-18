@@ -5,8 +5,8 @@ from logger import TradeLogger
 class Executor:
     def __init__(self):
         self.exchange = ccxt.alpaca({
-            'apiKey': config.APACA_API_KEY,
-            'secret': config.APACA_API_SECRET,
+            'apiKey': config.ALPACA_API_KEY,
+            'secret': config.ALPACA_API_SECRET,
             'enableRateLimit': True,
             'options': {
                 'defaultType': 'future',
