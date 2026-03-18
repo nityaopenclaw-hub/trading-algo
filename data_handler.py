@@ -7,8 +7,8 @@ from config import SYMBOLS, TIMEFRAMES, ALPACA_API_KEY, ALPACA_API_SECRET
 class DataHandler:
     def __init__(self):
         self.exchange = ccxt.alpaca({
-            'apiKey': ALPACA_API_KEY,
-            'secret': ALPACA_API_SECRET,
+            'apiKey': config.ALPACA_API_KEY,
+            'secret': config.ALPACA_API_SECRET,
             'enableRateLimit': True,
             'options': {
                 'defaultType': 'future',  # Alpaca futures
